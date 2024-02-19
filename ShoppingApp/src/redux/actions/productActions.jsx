@@ -14,11 +14,10 @@ export const selectedProducts = (products) => {
   };
 };
 
-// export const removeSelected_product = (products,id) => {
-//   return {
-//     type: Actions.REMOVE_SELECTED_PRODUCT,
-//     payload:id
-//   };
-// };
+export const removeSelected_product = () => {
+  return {
+    type: Actions.REMOVE_SELECTED_PRODUCT,
+  };
+};
 
 

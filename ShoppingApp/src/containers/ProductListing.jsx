@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import ProductComponent from "./ProductComponent";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { setProducts } from "../redux/actions/productActions";
 
 const ProductListing = () => {
-  const products = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const fetchProducts = async () => {
@@ -18,7 +17,6 @@ const ProductListing = () => {
   useEffect(() => {
     fetchProducts();
   }, []);
-  console.log(products);
   return (
     <div className="ui grid cotainer " style={{margin:'30px'}}>
       <ProductComponent />
